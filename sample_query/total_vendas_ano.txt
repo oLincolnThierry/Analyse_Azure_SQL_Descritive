@@ -1,0 +1,10 @@
+-- Total de Vendas no Ano
+SELECT 
+    YEAR(OrderDate) AS Year, 
+    SUM(TotalDue) AS TotalSales
+FROM 
+    [SalesLT].[SalesOrderHeader]
+GROUP BY 
+    YEAR(OrderDate)
+ORDER BY 
+    Year;

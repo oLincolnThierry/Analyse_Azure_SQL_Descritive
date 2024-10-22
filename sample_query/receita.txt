@@ -1,0 +1,15 @@
+--Produtos Mais vendidos e Receita
+SELECT 
+    p.Name AS ProductName, 
+    SUM(sod.OrderQty) AS TotalQuantity,
+    SUM(sod.OrderQty * sod.UnitPrice) AS TotalRevenue
+FROM 
+    [SalesLT].[SalesOrderDetail] AS sod
+JOIN 
+    [SalesLT].[vProductAndDescription] AS p ON sod.ProductID = p.ProductID
+JOIN 
+    [SalesLT].[SalesOrderHeader] AS soh ON sod.SalesOrderID = soh.SalesOrderID
+GROUP BY 
+    p.Name
+ORDER BY 
+    TotalRevenue DESC;

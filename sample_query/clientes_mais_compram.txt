@@ -1,0 +1,14 @@
+-- Clientes Que mais compram
+SELECT 
+    c.FirstName, 
+    c.LastName, 
+    COUNT(soh.SalesOrderID) AS TotalOrders,
+    SUM(soh.TotalDue) AS TotalSpent
+FROM 
+    [SalesLT].[SalesOrderHeader] AS soh
+JOIN 
+    [SalesLT].[Customer] AS c ON soh.CustomerID = c.CustomerID
+GROUP BY 
+    c.FirstName, c.LastName
+ORDER BY 
+    TotalSpent DESC

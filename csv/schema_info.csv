@@ -1,0 +1,14 @@
+TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,TABLE_TYPE
+AdventureWorks,SalesLT,Customer,BASE TABLE
+AdventureWorks,SalesLT,ProductModel,BASE TABLE
+AdventureWorks,SalesLT,vProductModelCatalogDescription,VIEW
+AdventureWorks,SalesLT,ProductDescription,BASE TABLE
+AdventureWorks,SalesLT,Product,BASE TABLE
+AdventureWorks,SalesLT,ProductModelProductDescription,BASE TABLE
+AdventureWorks,SalesLT,vProductAndDescription,VIEW
+AdventureWorks,SalesLT,ProductCategory,BASE TABLE
+AdventureWorks,SalesLT,vGetAllCategories,VIEW
+AdventureWorks,SalesLT,Address,BASE TABLE
+AdventureWorks,SalesLT,CustomerAddress,BASE TABLE
+AdventureWorks,SalesLT,SalesOrderDetail,BASE TABLE
+AdventureWorks,SalesLT,SalesOrderHeader,BASE TABLE
